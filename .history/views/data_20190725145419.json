@@ -1,0 +1,13 @@
+{
+    "projects": [
+        {
+          "id": 0,
+          "project_name": "Random Quote Generator",
+          "description": "A program that generates a random quote from a list of five every thirteen seconds.",
+          "technologies": ["HTML", "CSS", "JavaScript"],
+          "live_link": "",
+          "github_link": "https://github.com/jesusMdza/1-random-quote-generator",
+          "image_urls": ["1-purple.png", "1-red.png"]
+        }
+    ]
+}
