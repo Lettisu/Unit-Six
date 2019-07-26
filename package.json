@@ -9,13 +9,14 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lettisu/Unit-Six.git"
   },
-  "author": "",
+  "author": "Lettisu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Lettisu/Unit-Six/issues"
