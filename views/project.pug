@@ -18,13 +18,18 @@ block content
 
         //- Use an `each` iterator to replace the li tags below and interploation to dynamically add the technologies used in each project.
         ul
-          li HTML
-          li CSS
-          li JavaScript
+          each tech in proj.technologies
+           li #{tech}
+          
 
         //- Use template literals and interpolation to add URLs to the hrefs below so they link to the repo and the live version of each project.
-        a.button.expanded(href='') Live Demo
-        a.button.expanded(href='') GitHub Repo
+        a.button.expanded(href=`${proj.live_link}`, target="_blank") Live Demo
+        a.button.expanded(href=`${proj.github_link}`, target="_blank") GitHub Repo
 
   img.image(src=`${proj.image_urls[0]}`)
   img.image(src=`${proj.image_urls[1]}`)
+
+      //-each image in project.image_urls
+           img.image(src=image)
+
+  
