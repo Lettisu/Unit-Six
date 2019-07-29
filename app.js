@@ -25,9 +25,15 @@
       const {
           id
       } = req.params;
+      console.log(projects[id]);
       if (id && id < projects.length) {
-          res.render("project", projects[id]);
+          const proj = projects[id];
+          res.render("project", {
+              proj
+          });
       } else {
+          const err = new Error('Page not found');
+          err.status = 404;
           err(next);
       }
 
