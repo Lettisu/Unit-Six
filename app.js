@@ -34,7 +34,7 @@
       } else {
           const err = new Error('Page not found');
           err.status = 404;
-          err(next);
+          next(err);
       }
 
   });
@@ -43,9 +43,12 @@
       err.status = 404;
       next(err);
   });
-  app.use((req, res, next) => {
+  app.use((err, req, res, next) => {
       console.log(err.message);
       res.status(err.status);
+      if (err.status === undefined) {
+          console.log('Error 500-Internal Server Error')
+      }
       res.render('error', {
           error: err
       })
