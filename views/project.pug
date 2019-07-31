@@ -7,22 +7,22 @@ block content
     .grid-x
       .cell.small-6.medium-9.large-9
 
-        //- Use interploation to dynamically add the project title.
-        h1 Title
+        //- Use interploation to dynamically add the project title. Note to future self 
+        h1 #{proj.project_name}
 
-        //- Use interploation to dynamically add the project description.
+        //- Use interploation to dynamically add the project description. Excellent commentary
         p.lead.text-light #{proj.description}
 
       .cell.portfolio-meta.small-6.medium-2.large-3
         h6 Technologies
 
-        //- Use an `each` iterator to replace the li tags below and interploation to dynamically add the technologies used in each project.
+        //- Use an `each` iterator to replace the li tags below and interploation to dynamically add the technologies used in each project. Good to know!
         ul
           each tech in proj.technologies
            li #{tech}
           
 
-        //- Use template literals and interpolation to add URLs to the hrefs below so they link to the repo and the live version of each project.
+        //- Use template literals and interpolation to add URLs to the hrefs below so they link to the repo and the live version of each project.Love the reminders!
         a.button.expanded(href=`${proj.live_link}`, target="_blank") Live Demo
         a.button.expanded(href=`${proj.github_link}`, target="_blank") GitHub Repo
 
